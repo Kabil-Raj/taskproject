@@ -11,7 +11,7 @@ public class EmployeeDetailsControllerService {
 			// Need random value between 0 to 25
 			// adding 97 with the random value so that a character between 97 to 122 will be
 			// obtained
-			int decimalValueOfCharacter = decimalValueOfLetterA + (int) (Math.random() * 25 + 1);
+			int decimalValueOfCharacter = decimalValueOfLetterA + (int) (Math.random() * 26);
 			randomString = randomString + (char) (decimalValueOfCharacter);
 		}
 		return randomString;
