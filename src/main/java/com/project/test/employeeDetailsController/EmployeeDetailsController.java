@@ -32,7 +32,15 @@ public class EmployeeDetailsController {
 
 	@Autowired
 	EmployeeRepository employeeRepo;
-
+	
+	
+	@PostMapping(value = "/passingjsonformat", consumes = "application/json")
+	public void createEmpDet(@RequestBody EmployeeDetails employeeDetails) {
+		employeeRepo.save(employeeDetails);
+	}
+	
+	
+	
 	@PostMapping("/employeeDetails")
 	public void createEmployeeRecord() {
 		for (int i = 0; i < 100; i++) {
